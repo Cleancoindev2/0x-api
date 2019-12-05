@@ -12,3 +12,4 @@ export const DEFAULT_LOCAL_POSTGRES_URI = 'postgresql://api:api@localhost/api';
 // API namespaces
 export const SRA_PATH = '/sra';
 export const STAKING_PATH = '/staking';
+export const META_TRANSACTION_PATH = '/meta';

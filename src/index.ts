@@ -5,6 +5,7 @@ import * as config from './config';
 import { SRA_PATH } from './constants';
 import { getDBConnectionAsync } from './db_connection';
 import { logger, logMiddleware } from './logger';
+import { MetaTransactionHttpService } from './services/meta_transaction_service';
 import { OrderWatcherService } from './services/order_watcher_service';
 import { OrderBookService } from './services/orderbook_service';
 import { SRAHttpService } from './services/sra_http_service';
@@ -17,13 +18,7 @@ import { WebsocketService } from './services/websocket_service';
     const app = express();
     app.use(logMiddleware());
     const server = app.listen(config.HTTP_PORT, () => {
-        logger.info(
-            `API (HTTP) listening on port ${config.HTTP_PORT}!\nConfig: ${JSON.stringify(
-                config,
-                null,
-                2,
-            )}`,
-        );
+        logger.info(`API (HTTP) listening on port ${config.HTTP_PORT}!\nConfig: ${JSON.stringify(config, null, 2)}`);
     });
     const stakingDataService = new StakingDataService(connection);
     // tslint:disable-next-line:no-unused-expression
@@ -39,6 +34,8 @@ import { WebsocketService } from './services/websocket_service';
     const orderBookService = new OrderBookService(connection, meshClient);
     // tslint:disable-next-line:no-unused-expression
     new SRAHttpService(app, orderBookService);
+    // tslint:disable-next-line:no-unused-expression
+    new MetaTransactionHttpService(app, orderBookService);
     if (meshClient) {
         const orderWatcherService = new OrderWatcherService(connection, meshClient);
         await orderWatcherService.syncOrderbookAsync();
