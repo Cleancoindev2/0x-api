@@ -50,6 +50,7 @@
         "@0x/types": "^2.5.0-beta.2",
         "@0x/typescript-typings": "^4.4.0-beta.2",
         "@0x/utils": "^4.6.0-beta.2",
+        "@0x/web3-wrapper": "^7.0.0",
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
         "debug": "^4.1.1",
