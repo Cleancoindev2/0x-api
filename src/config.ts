@@ -32,6 +32,9 @@ export const CHAIN_ID = _.isEmpty(process.env.CHAIN_ID)
     ? 42
     : assertEnvVarType('CHAIN_ID', process.env.CHAIN_ID, EnvVarType.ChainId);
 
+// Ethereum RPC Url
+export const ETHEREUM_RPC_URL = assertEnvVarType('ETHEREUM_RPC_URL', process.env.ETHEREUM_RPC_URL, EnvVarType.Url);
+
 // Mesh Endpoint
 export const MESH_WEBSOCKET_URI = _.isEmpty(process.env.MESH_WEBSOCKET_URI)
     ? 'ws://localhost:60557'

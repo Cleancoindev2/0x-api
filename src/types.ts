@@ -154,3 +154,15 @@ export interface StakingPoolsResponse {
 export interface ObjectMap<T> {
     [key: string]: T;
 }
+
+export enum Network {
+    Ganache = 50,
+    Kovan = 42,
+    Mainnet = 1,
+}
+
+export interface TokenMetadata {
+    symbol: string;
+    decimals: number;
+    tokenAddress: string;
+}
