@@ -16,22 +16,22 @@ export interface TokenMetadataAndChainAddresses {
 // tslint:disable:max-file-line-count
 export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
     {
+        symbol: 'ZRX',
+        name: '0x Protocol Token',
+        decimals: 18,
+        tokenAddresses: {
+            [ChainId.Mainnet]: '0xe41d2489571d322189246dafa5ebde1f4699f498',
+            [ChainId.Kovan]: '0x2002d3812f58e35f0ea1ffbf80a75a38c32175fa',
+            [ChainId.Ganache]: '0x871dd7c2b4b25e1aa18728e9d5f2af4c4e431f5c',
+        },
+    },
+    {
         symbol: 'DAI',
         name: 'Dai Stablecoin',
         decimals: 18,
         tokenAddresses: {
             [ChainId.Mainnet]: '0x6b175474e89094c44da98b954eedeac495271d0f',
             [ChainId.Kovan]: '0xc4375b7de8af5a38a93548eb8453a498222c4ff2',
-            [ChainId.Ganache]: '0x34d402f14d58e001d8efbe6585051bf9706aa064',
-        },
-    },
-    {
-        symbol: 'REP',
-        name: 'Augur Reputation',
-        decimals: 18,
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0x1985365e9f78359a9B6AD760e32412f4a445E862',
-            [ChainId.Kovan]: '0xb18845c260f680d5b9d84649638813e342e4f8c9',
             [ChainId.Ganache]: '0x34d402f14d58e001d8efbe6585051bf9706aa064',
         },
     },
@@ -46,16 +46,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         },
     },
     {
-        symbol: 'ZRX',
-        name: '0x Protocol Token',
-        decimals: 18,
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0xe41d2489571d322189246dafa5ebde1f4699f498',
-            [ChainId.Kovan]: '0x2002d3812f58e35f0ea1ffbf80a75a38c32175fa',
-            [ChainId.Ganache]: '0x871dd7c2b4b25e1aa18728e9d5f2af4c4e431f5c',
-        },
-    },
-    {
         symbol: 'USDC',
         name: 'USD Coin',
         decimals: 6,
@@ -63,6 +53,16 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
             [ChainId.Mainnet]: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
             [ChainId.Kovan]: '0x5a719cf3e02c17c876f6d294adb5cb7c6eb47e2f',
             [ChainId.Ganache]: NULL_ADDRESS,
+        },
+    },
+    {
+        symbol: 'REP',
+        name: 'Augur Reputation',
+        decimals: 18,
+        tokenAddresses: {
+            [ChainId.Mainnet]: '0x1985365e9f78359a9B6AD760e32412f4a445E862',
+            [ChainId.Kovan]: '0xb18845c260f680d5b9d84649638813e342e4f8c9',
+            [ChainId.Ganache]: '0x34d402f14d58e001d8efbe6585051bf9706aa064',
         },
     },
     {
@@ -167,16 +167,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
     },
     {
         decimals: 18,
-        symbol: 'GNT',
-        name: 'Golem Network Token',
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0xa74476443119a942de498590fe1f2454d7d4ac0d',
-            [ChainId.Kovan]: NULL_ADDRESS,
-            [ChainId.Ganache]: NULL_ADDRESS,
-        },
-    },
-    {
-        decimals: 18,
         symbol: 'OMG',
         name: 'OmiseGO',
         tokenAddresses: {
@@ -246,16 +236,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         },
     },
     {
-        decimals: 8,
-        symbol: 'AION',
-        name: 'Aion Network',
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0x4ceda7906a5ed2179785cd3a40a69ee8bc99c466',
-            [ChainId.Kovan]: NULL_ADDRESS,
-            [ChainId.Ganache]: NULL_ADDRESS,
-        },
-    },
-    {
         decimals: 18,
         symbol: 'GEN',
         name: 'DAOstack',
@@ -300,7 +280,7 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         symbol: 'MLN',
         name: 'Melon',
         tokenAddresses: {
-            [ChainId.Mainnet]: '0xbeb9ef514a379b997e0798fdcc901ee474b6d9a1',
+            [ChainId.Mainnet]: '0xec67005c4e498ec7f55e092bd1d35cbc47c91892',
             [ChainId.Kovan]: NULL_ADDRESS,
             [ChainId.Ganache]: NULL_ADDRESS,
         },
@@ -331,16 +311,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         name: 'iExec RLC Token',
         tokenAddresses: {
             [ChainId.Mainnet]: '0x607f4c5bb672230e8672085532f7e901544a7375',
-            [ChainId.Kovan]: NULL_ADDRESS,
-            [ChainId.Ganache]: NULL_ADDRESS,
-        },
-    },
-    {
-        decimals: 18,
-        symbol: 'ICN',
-        name: 'ICONOMI',
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0x888666ca69e0f178ded6d75b5726cee99a87d698',
             [ChainId.Kovan]: NULL_ADDRESS,
             [ChainId.Ganache]: NULL_ADDRESS,
         },
@@ -377,7 +347,7 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
     },
     {
         decimals: 8,
-        symbol: 'cDAI',
+        symbol: 'cSAI',
         name: 'Compound Dai',
         tokenAddresses: {
             [ChainId.Mainnet]: '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643',
@@ -401,16 +371,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         name: 'Compound Ether',
         tokenAddresses: {
             [ChainId.Mainnet]: '0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5',
-            [ChainId.Kovan]: NULL_ADDRESS,
-            [ChainId.Ganache]: NULL_ADDRESS,
-        },
-    },
-    {
-        decimals: 8,
-        symbol: 'cREP',
-        name: 'Compound Augur',
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0x158079ee67fce2f58472a96584a73c7ab9ac95c1',
             [ChainId.Kovan]: NULL_ADDRESS,
             [ChainId.Ganache]: NULL_ADDRESS,
         },
@@ -481,16 +441,6 @@ export const TokenMetadatasForChains: TokenMetadataAndChainAddresses[] = [
         name: 'Binance Coin',
         tokenAddresses: {
             [ChainId.Mainnet]: '0xb8c77482e45f1f44de1745f52c74426c631bdd52',
-            [ChainId.Kovan]: NULL_ADDRESS,
-            [ChainId.Ganache]: NULL_ADDRESS,
-        },
-    },
-    {
-        decimals: 18,
-        symbol: 'ICX',
-        name: 'ICON',
-        tokenAddresses: {
-            [ChainId.Mainnet]: '0xb5a5f22694352c15b00323844ad545abb2b11028',
             [ChainId.Kovan]: NULL_ADDRESS,
             [ChainId.Ganache]: NULL_ADDRESS,
         },
